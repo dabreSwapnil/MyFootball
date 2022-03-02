@@ -53,13 +53,7 @@ const addMatchTile = (data) => {
   match.appendChild(matchtile);
 };
 
-const addBreak=()=>{
-	const matchbreak = document.createElement("div");
-	matchbreak.classList.add("match-tile");
-	const hh = document.createElement('hr');
-	matchbreak.appendChild(hh);
-    match.appendChild(matchbreak);
-}
+
 const getData = (async () => {
         const setHeader = {
           method: "GET",
@@ -99,7 +93,7 @@ const getData = (async () => {
         for (var i = 1; i < matchesList.length; i++) {
           //  console.log(matchesList[i]);
           addMatchTile(matchesList[i]);
-          addBreak();
+          
           
         }
       })();
